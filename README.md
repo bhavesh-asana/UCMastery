@@ -1,27 +1,56 @@
 # UCMastery
-This repository includes all the academic resources
+The UCMastery repository includes the academic materials, assignments, project work of the individual subjects.
+
+In this repository the branches are the acedmic courses. You can access the course files on choosing the specific branch.
 
 # Working with repository
-1. Clone the repository
+## Accessing files in local
+1. Clone the Master branch
+   ```terminal
+   git clone https://github.com/bhavesh-asana/UCMastery.git
+   ```
+2. Clone a course from the repository
     ```terminal
-    git pull https://github.com/bhavesh-asana/UCMastery.git <branch-name>
-    ```
-2. The repository is organised in such a way that the subjects are the branches. Check for the subject using
-    ```terminal
-    git branch -r
+    git clone -b <branch-name> https://github.com/bhavesh-asana/UCMastery.git
     ```
     
-    
-3. Switch the brach
+# Contribution
+## Adding files to exsisting branch
+1. Clone the branch as stated above
+2. In the cloned directory, you can find a brach created, which is named as your course.
+   ```terminal
+   git branch
+   ```
+3. Add the files and make a commit
+   ```terminal
+   git add <file-name/path>
+   git commit -m "<commit-message>"
+4. Send your work
+   ```terminal
+   git push --set-upstream origin <branch-name>
+   ```
+
+## Adding files on creating a new brach
+1. Create a folder in your local machine.
+2. Initialize the GitHub repository
+   ```terminal
+   git init
+   ```
+3. Set the repository to UCMastery
+   ```terminal
+   git remote add origin https://github.com/bhavesh-asana/UCMastery.git
+   ```
+4. Create a branch
+   ```terminal
+   git branch -M <course-name>
+   ```
+   In this repository, the course name will be the branch name.
+5. Add the files and make commit
     ```terminal
-    git checkout origin/<name-of-subject>
+    git add <file-name/path>
+    git commit -m "<commit-message>"
     ```
-4. Add and Commit
-    ```terminal
-    git add -A
-    git commit -m "<commit message>"
-    
-5. Push to the branch
-    ```terminal
-    git push origin HEAD:<name-of-remote-branch>
-    ```
+6. Send the work to remote repository
+   ```terminal
+   git push --set-upstream origin <branch-name>
+   ```
